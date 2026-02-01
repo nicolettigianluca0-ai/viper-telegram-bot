@@ -16,11 +16,11 @@ import os
 # =========================================
 
 # 1. Inserisci il TOKEN del tuo bot (dal file token_bot.txt)
-TOKEN = "8501942982:AAF3A196YNwxb246-VpJIrCnBelqkwNYhlU"
+TOKEN = os.getenv("BOT_TOKEN")
 
 # 2. Inserisci il TUO user ID Telegram (per ricevere notifiche)
 # Per trovarlo: avvia il bot e scrivi /getmyid
-ADMIN_ID = 8497633035  # Il tuo Telegram ID - riceverai messaggi diretti clienti
+ADMIN_ID = int(os.getenv("ADMIN_ID", "0"))
 
 # 3. File per salvare i dati clienti
 CLIENTI_FILE = "clienti_viper.json"
